@@ -1,0 +1,14 @@
+
+*.lock
+.vs/Process Killer/v16/.suo
+*.ide
+*.ide-shm
+*.ide-wal
+*.exe
+*.config
+*.pdb
+*.xml
+*.cache
+*.txt
+*.resources
+*.dll
