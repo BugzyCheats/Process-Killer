@@ -23,22 +23,37 @@ Partial Class Main
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.MainForm = New Process_Killer.UbuntuTheme()
+        Me.ControlBox = New Process_Killer.UbuntuControlBox()
         Me.KillProcess = New Process_Killer.UbuntuButtonOrange()
         Me.ProcessName = New Process_Killer.UbuntuTextBox()
+        Me.ExitApplication = New Process_Killer.UbuntuCheckBox()
         Me.MainForm.SuspendLayout()
         Me.SuspendLayout()
         '
         'MainForm
         '
         Me.MainForm.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
+        Me.MainForm.Controls.Add(Me.ExitApplication)
+        Me.MainForm.Controls.Add(Me.ControlBox)
         Me.MainForm.Controls.Add(Me.KillProcess)
         Me.MainForm.Controls.Add(Me.ProcessName)
         Me.MainForm.Dock = System.Windows.Forms.DockStyle.Fill
         Me.MainForm.Location = New System.Drawing.Point(0, 0)
         Me.MainForm.Name = "MainForm"
-        Me.MainForm.Size = New System.Drawing.Size(374, 102)
+        Me.MainForm.Size = New System.Drawing.Size(374, 119)
         Me.MainForm.TabIndex = 0
         Me.MainForm.Text = "Process Killer"
+        '
+        'ControlBox
+        '
+        Me.ControlBox.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ControlBox.BackColor = System.Drawing.Color.Transparent
+        Me.ControlBox.Font = New System.Drawing.Font("Marlett", 7.0!)
+        Me.ControlBox.Location = New System.Drawing.Point(309, 2)
+        Me.ControlBox.Name = "ControlBox"
+        Me.ControlBox.Size = New System.Drawing.Size(75, 23)
+        Me.ControlBox.TabIndex = 2
+        Me.ControlBox.Text = "UbuntuControlBox1"
         '
         'KillProcess
         '
@@ -62,14 +77,26 @@ Partial Class Main
         Me.ProcessName.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left
         Me.ProcessName.UseSystemPasswordChar = False
         '
+        'ExitApplication
+        '
+        Me.ExitApplication.BackColor = System.Drawing.Color.White
+        Me.ExitApplication.Checked = False
+        Me.ExitApplication.ForeColor = System.Drawing.Color.Maroon
+        Me.ExitApplication.Location = New System.Drawing.Point(12, 96)
+        Me.ExitApplication.Name = "ExitApplication"
+        Me.ExitApplication.Size = New System.Drawing.Size(145, 14)
+        Me.ExitApplication.TabIndex = 3
+        Me.ExitApplication.Text = "Exit application on kill"
+        '
         'Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(374, 102)
+        Me.ClientSize = New System.Drawing.Size(374, 119)
         Me.Controls.Add(Me.MainForm)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Main"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form1"
         Me.TransparencyKey = System.Drawing.Color.Fuchsia
         Me.MainForm.ResumeLayout(False)
@@ -80,4 +107,6 @@ Partial Class Main
     Friend WithEvents MainForm As UbuntuTheme
     Friend WithEvents KillProcess As UbuntuButtonOrange
     Friend WithEvents ProcessName As UbuntuTextBox
+    Friend WithEvents ControlBox As UbuntuControlBox
+    Friend WithEvents ExitApplication As UbuntuCheckBox
 End Class

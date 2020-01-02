@@ -10,6 +10,15 @@ Public Class Main
     End Sub
 
     Private Sub KillProcess_Click(sender As Object, e As EventArgs) Handles KillProcess.Click
-        Kill()
+        If ProcessName.Text = "" Then
+            MsgBox("Please enter a process name.", MsgBoxStyle.Information, "Process Killer")
+        Else
+            Kill()
+            MsgBox("Killed " + ProcessName.Text, MsgBoxStyle.Information, "Process Killer")
+
+            If ExitApplication.Checked = True Then
+                Close()
+            End If
+        End If
     End Sub
 End Class
