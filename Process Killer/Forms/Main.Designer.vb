@@ -22,32 +22,62 @@ Partial Class Main
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.UbuntuTheme1 = New Process_Killer.UbuntuTheme()
+        Me.MainForm = New Process_Killer.UbuntuTheme()
+        Me.KillProcess = New Process_Killer.UbuntuButtonOrange()
+        Me.ProcessName = New Process_Killer.UbuntuTextBox()
+        Me.MainForm.SuspendLayout()
         Me.SuspendLayout()
         '
-        'UbuntuTheme1
+        'MainForm
         '
-        Me.UbuntuTheme1.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
-        Me.UbuntuTheme1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.UbuntuTheme1.Location = New System.Drawing.Point(0, 0)
-        Me.UbuntuTheme1.Name = "UbuntuTheme1"
-        Me.UbuntuTheme1.Size = New System.Drawing.Size(800, 450)
-        Me.UbuntuTheme1.TabIndex = 0
-        Me.UbuntuTheme1.Text = "UbuntuTheme1"
+        Me.MainForm.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
+        Me.MainForm.Controls.Add(Me.KillProcess)
+        Me.MainForm.Controls.Add(Me.ProcessName)
+        Me.MainForm.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.MainForm.Location = New System.Drawing.Point(0, 0)
+        Me.MainForm.Name = "MainForm"
+        Me.MainForm.Size = New System.Drawing.Size(374, 102)
+        Me.MainForm.TabIndex = 0
+        Me.MainForm.Text = "Process Killer"
+        '
+        'KillProcess
+        '
+        Me.KillProcess.BackColor = System.Drawing.Color.Transparent
+        Me.KillProcess.ForeColor = System.Drawing.Color.FromArgb(CType(CType(86, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.KillProcess.Location = New System.Drawing.Point(12, 67)
+        Me.KillProcess.Name = "KillProcess"
+        Me.KillProcess.Size = New System.Drawing.Size(350, 23)
+        Me.KillProcess.TabIndex = 1
+        Me.KillProcess.Text = "Kill"
+        '
+        'ProcessName
+        '
+        Me.ProcessName.BackColor = System.Drawing.Color.White
+        Me.ProcessName.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
+        Me.ProcessName.Location = New System.Drawing.Point(12, 38)
+        Me.ProcessName.MaxLength = 32767
+        Me.ProcessName.Name = "ProcessName"
+        Me.ProcessName.Size = New System.Drawing.Size(350, 26)
+        Me.ProcessName.TabIndex = 0
+        Me.ProcessName.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left
+        Me.ProcessName.UseSystemPasswordChar = False
         '
         'Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.UbuntuTheme1)
+        Me.ClientSize = New System.Drawing.Size(374, 102)
+        Me.Controls.Add(Me.MainForm)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Main"
         Me.Text = "Form1"
         Me.TransparencyKey = System.Drawing.Color.Fuchsia
+        Me.MainForm.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents UbuntuTheme1 As UbuntuTheme
+    Friend WithEvents MainForm As UbuntuTheme
+    Friend WithEvents KillProcess As UbuntuButtonOrange
+    Friend WithEvents ProcessName As UbuntuTextBox
 End Class
