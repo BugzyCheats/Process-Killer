@@ -23,34 +23,46 @@ Partial Class Main
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Main))
-        Me.MainForm = New Process_Killer.UbuntuTheme()
+        Me.Repository = New Process_Killer.UbuntuTheme()
+        Me.Source = New Process_Killer.UbuntuButtonGray()
         Me.ExitApplication = New Process_Killer.UbuntuCheckBox()
         Me.ControlBox = New Process_Killer.UbuntuControlBox()
         Me.KillProcess = New Process_Killer.UbuntuButtonOrange()
         Me.ProcessName = New Process_Killer.UbuntuTextBox()
-        Me.MainForm.SuspendLayout()
+        Me.Repository.SuspendLayout()
         Me.SuspendLayout()
         '
-        'MainForm
+        'Repository
         '
-        Me.MainForm.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
-        Me.MainForm.Controls.Add(Me.ExitApplication)
-        Me.MainForm.Controls.Add(Me.ControlBox)
-        Me.MainForm.Controls.Add(Me.KillProcess)
-        Me.MainForm.Controls.Add(Me.ProcessName)
-        Me.MainForm.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.MainForm.Location = New System.Drawing.Point(0, 0)
-        Me.MainForm.Name = "MainForm"
-        Me.MainForm.Size = New System.Drawing.Size(374, 119)
-        Me.MainForm.TabIndex = 0
-        Me.MainForm.Text = "Process Killer"
+        Me.Repository.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
+        Me.Repository.Controls.Add(Me.Source)
+        Me.Repository.Controls.Add(Me.ExitApplication)
+        Me.Repository.Controls.Add(Me.ControlBox)
+        Me.Repository.Controls.Add(Me.KillProcess)
+        Me.Repository.Controls.Add(Me.ProcessName)
+        Me.Repository.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Repository.Location = New System.Drawing.Point(0, 0)
+        Me.Repository.Name = "Repository"
+        Me.Repository.Size = New System.Drawing.Size(374, 147)
+        Me.Repository.TabIndex = 0
+        Me.Repository.Text = "Process Killer"
+        '
+        'Source
+        '
+        Me.Source.BackColor = System.Drawing.Color.Transparent
+        Me.Source.ForeColor = System.Drawing.Color.FromArgb(CType(CType(90, Byte), Integer), CType(CType(84, Byte), Integer), CType(CType(82, Byte), Integer))
+        Me.Source.Location = New System.Drawing.Point(12, 93)
+        Me.Source.Name = "Source"
+        Me.Source.Size = New System.Drawing.Size(350, 23)
+        Me.Source.TabIndex = 4
+        Me.Source.Text = "Source"
         '
         'ExitApplication
         '
         Me.ExitApplication.BackColor = System.Drawing.Color.White
         Me.ExitApplication.Checked = True
         Me.ExitApplication.ForeColor = System.Drawing.Color.Maroon
-        Me.ExitApplication.Location = New System.Drawing.Point(12, 96)
+        Me.ExitApplication.Location = New System.Drawing.Point(12, 122)
         Me.ExitApplication.Name = "ExitApplication"
         Me.ExitApplication.Size = New System.Drawing.Size(145, 14)
         Me.ExitApplication.TabIndex = 3
@@ -94,22 +106,23 @@ Partial Class Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(374, 119)
-        Me.Controls.Add(Me.MainForm)
+        Me.ClientSize = New System.Drawing.Size(374, 147)
+        Me.Controls.Add(Me.Repository)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Main"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Form1"
+        Me.Text = "Main"
         Me.TransparencyKey = System.Drawing.Color.Fuchsia
-        Me.MainForm.ResumeLayout(False)
+        Me.Repository.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents MainForm As UbuntuTheme
+    Friend WithEvents Repository As UbuntuTheme
     Friend WithEvents KillProcess As UbuntuButtonOrange
     Friend WithEvents ProcessName As UbuntuTextBox
     Friend WithEvents ControlBox As UbuntuControlBox
     Friend WithEvents ExitApplication As UbuntuCheckBox
+    Friend WithEvents Source As UbuntuButtonGray
 End Class

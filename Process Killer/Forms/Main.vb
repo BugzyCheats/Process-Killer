@@ -16,7 +16,7 @@ Public Class Main
             If ProcessName.Text.Contains(".exe") Then
                 MsgBox("Please remove the process extension.", MsgBoxStyle.Critical, "Process Killer")
             Else
-                Kill()
+                Kill() 'Immediately stops the associated process.
                 MsgBox("Killed " + ProcessName.Text, MsgBoxStyle.Information, "Process Killer")
 
                 If ExitApplication.Checked = True Then
@@ -24,5 +24,9 @@ Public Class Main
                 End If
             End If
         End If
+    End Sub
+
+    Private Sub Source_Click(sender As Object, e As EventArgs) Handles Source.Click
+        Process.Start("https://github.com/RealBugzy/Process-Killer")
     End Sub
 End Class
