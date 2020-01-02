@@ -51,7 +51,7 @@ Partial Class Main
         '
         Me.Source.BackColor = System.Drawing.Color.Transparent
         Me.Source.ForeColor = System.Drawing.Color.FromArgb(CType(CType(90, Byte), Integer), CType(CType(84, Byte), Integer), CType(CType(82, Byte), Integer))
-        Me.Source.Location = New System.Drawing.Point(12, 93)
+        Me.Source.Location = New System.Drawing.Point(12, 92)
         Me.Source.Name = "Source"
         Me.Source.Size = New System.Drawing.Size(350, 23)
         Me.Source.TabIndex = 4
@@ -93,7 +93,7 @@ Partial Class Main
         '
         Me.ProcessName.BackColor = System.Drawing.Color.White
         Me.ProcessName.ForeColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(102, Byte), Integer))
-        Me.ProcessName.Location = New System.Drawing.Point(12, 38)
+        Me.ProcessName.Location = New System.Drawing.Point(12, 39)
         Me.ProcessName.MaxLength = 32767
         Me.ProcessName.Name = "ProcessName"
         Me.ProcessName.Size = New System.Drawing.Size(350, 26)
@@ -112,7 +112,7 @@ Partial Class Main
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Main"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Main"
+        Me.Text = "Process Killer"
         Me.TransparencyKey = System.Drawing.Color.Fuchsia
         Me.Repository.ResumeLayout(False)
         Me.ResumeLayout(False)
