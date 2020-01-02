@@ -13,11 +13,15 @@ Public Class Main
         If ProcessName.Text = "" Then
             MsgBox("Please enter a process name.", MsgBoxStyle.Information, "Process Killer")
         Else
-            Kill()
-            MsgBox("Killed " + ProcessName.Text, MsgBoxStyle.Information, "Process Killer")
+            If ProcessName.Text.Contains(".exe") Then
+                MsgBox("Please remove the process extension.", MsgBoxStyle.Critical, "Process Killer")
+            Else
+                Kill()
+                MsgBox("Killed " + ProcessName.Text, MsgBoxStyle.Information, "Process Killer")
 
-            If ExitApplication.Checked = True Then
-                Close()
+                If ExitApplication.Checked = True Then
+                    Close()
+                End If
             End If
         End If
     End Sub

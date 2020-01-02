@@ -23,10 +23,10 @@ Partial Class Main
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.MainForm = New Process_Killer.UbuntuTheme()
+        Me.ExitApplication = New Process_Killer.UbuntuCheckBox()
         Me.ControlBox = New Process_Killer.UbuntuControlBox()
         Me.KillProcess = New Process_Killer.UbuntuButtonOrange()
         Me.ProcessName = New Process_Killer.UbuntuTextBox()
-        Me.ExitApplication = New Process_Killer.UbuntuCheckBox()
         Me.MainForm.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -43,6 +43,17 @@ Partial Class Main
         Me.MainForm.Size = New System.Drawing.Size(374, 119)
         Me.MainForm.TabIndex = 0
         Me.MainForm.Text = "Process Killer"
+        '
+        'ExitApplication
+        '
+        Me.ExitApplication.BackColor = System.Drawing.Color.White
+        Me.ExitApplication.Checked = True
+        Me.ExitApplication.ForeColor = System.Drawing.Color.Maroon
+        Me.ExitApplication.Location = New System.Drawing.Point(12, 96)
+        Me.ExitApplication.Name = "ExitApplication"
+        Me.ExitApplication.Size = New System.Drawing.Size(145, 14)
+        Me.ExitApplication.TabIndex = 3
+        Me.ExitApplication.Text = "Exit application on kill"
         '
         'ControlBox
         '
@@ -74,19 +85,9 @@ Partial Class Main
         Me.ProcessName.Name = "ProcessName"
         Me.ProcessName.Size = New System.Drawing.Size(350, 26)
         Me.ProcessName.TabIndex = 0
+        Me.ProcessName.Text = "Notepad"
         Me.ProcessName.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left
         Me.ProcessName.UseSystemPasswordChar = False
-        '
-        'ExitApplication
-        '
-        Me.ExitApplication.BackColor = System.Drawing.Color.White
-        Me.ExitApplication.Checked = False
-        Me.ExitApplication.ForeColor = System.Drawing.Color.Maroon
-        Me.ExitApplication.Location = New System.Drawing.Point(12, 96)
-        Me.ExitApplication.Name = "ExitApplication"
-        Me.ExitApplication.Size = New System.Drawing.Size(145, 14)
-        Me.ExitApplication.TabIndex = 3
-        Me.ExitApplication.Text = "Exit application on kill"
         '
         'Main
         '
