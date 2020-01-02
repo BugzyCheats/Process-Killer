@@ -22,6 +22,7 @@ Partial Class Main
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Main))
         Me.MainForm = New Process_Killer.UbuntuTheme()
         Me.ExitApplication = New Process_Killer.UbuntuCheckBox()
         Me.ControlBox = New Process_Killer.UbuntuControlBox()
@@ -96,6 +97,7 @@ Partial Class Main
         Me.ClientSize = New System.Drawing.Size(374, 119)
         Me.Controls.Add(Me.MainForm)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Main"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form1"
