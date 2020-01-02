@@ -62,7 +62,7 @@ Partial Class Main
         Me.ExitApplication.BackColor = System.Drawing.Color.White
         Me.ExitApplication.Checked = True
         Me.ExitApplication.ForeColor = System.Drawing.Color.Maroon
-        Me.ExitApplication.Location = New System.Drawing.Point(12, 122)
+        Me.ExitApplication.Location = New System.Drawing.Point(12, 121)
         Me.ExitApplication.Name = "ExitApplication"
         Me.ExitApplication.Size = New System.Drawing.Size(145, 14)
         Me.ExitApplication.TabIndex = 3
