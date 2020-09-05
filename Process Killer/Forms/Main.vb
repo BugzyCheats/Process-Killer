@@ -17,7 +17,7 @@ Public Class Main
                 MsgBox("Please remove the process extension.", MsgBoxStyle.Critical, "Process Killer")
             Else
                 Kill() 'Immediately stops the associated process.
-                MsgBox("Killed " + ProcessName.Text, MsgBoxStyle.Information, "Process Killer")
+                MsgBox("Killed " + ProcessName.Text + ".exe", MsgBoxStyle.Information, "Process Killer")
 
                 If ExitApplication.Checked = True Then
                     Close()
